@@ -11,6 +11,7 @@
     <ul>
       <% skills.forEach(s => { %>
         <li>
+            <a href="/skills/<%= s.id %>"><%= s.skills %></a>
           <%= s.language %>
             - 
           <%= s.level %>
