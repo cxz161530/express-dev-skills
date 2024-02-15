@@ -4,7 +4,10 @@
 
 module.exports = {
     index,
-    show
+    show,
+    newSkills,
+    create
+
   };
 
 function index(req, res) {
@@ -19,4 +22,14 @@ function index(req, res) {
       skills: skills.getOne(req.params.id),
     });
   }
-  
+  function newSkills(req, res) {
+    res.render('skills/new', { title: 'New skills' });
+  }
+
+  function create(req, res) {
+    console.log(req.body);
+    // The model is responsible for creating data
+    // Todo.create(req.body);
+    // Do a redirect anytime data is changed
+    res.redirect('/skills');
+  }

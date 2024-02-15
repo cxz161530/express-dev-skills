@@ -9,6 +9,9 @@ var router = express.Router();
 
  // GET /todos
  router.get('/', skillsCtrl.index);
+ router.get('/:new',skillsCtrl.newSkills)
  router.get('/:id', skillsCtrl.show)
+ router.post('/', skillsCtrl.create);
+
 
 module.exports = router;
