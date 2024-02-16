@@ -12,6 +12,7 @@ var router = express.Router();
  router.get('/:new',skillsCtrl.newSkills)
  router.get('/:id', skillsCtrl.show)
  router.post('/', skillsCtrl.create);
+ router.delete('/:id', skillsCtrl.deleted);
 
 
 module.exports = router;
